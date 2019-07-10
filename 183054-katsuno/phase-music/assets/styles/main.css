@@ -1,0 +1,178 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
+    sans-serif;
+  font-size: 1.6em;
+  overflow: hidden;
+  background-color: #cccccc;
+}
+/* #cccccc; */
+/* scale = 伸縮 */
+@keyframes move1 {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
+
+.move1 {
+  animation-name: move1; /* キーフレーム */
+  animation-duration: 1s; /* かかる時間 */
+  animation-timing-function: ease-in-out; /* 変化の度合い */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* rotate = 回転 */
+@keyframes move2 {
+  0% {
+    transform: rotate(0deg) scale(0.3);
+  }
+  100% {
+    transform: rotate(360deg) scale(2.5) translateY(-20px);
+  }
+}
+
+.move2 {
+  animation-name: move2; /* キーフレーム */
+  animation-duration: 3s; /* かかる時間 */
+  animation-timing-function: ease-in-out; /* 変化の度合い */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes move3 {
+  0% {
+    transform: translate(20px) translateY(80px) scale(0.5) perspective(300px);
+  }
+  100% {
+    transform: translate(-40px) translateY(-40px) scale(0.5);
+  }
+}
+
+.move3 {
+  animation-name: move3; /* キーフレーム */
+  animation-duration: 2s; /* かかる時間 */
+  animation-timing-function: linear; /* 変化の度合い */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes move4 {
+  0% {
+    transform: scale(0.05) rotate(0deg) skew(150deg) perspective(200px);
+  }
+  100% {
+    transform: scale(2.5) rotate(360deg);
+  }
+}
+
+.move4 {
+  animation-name: move4; /* キーフレーム */
+  animation-duration: 2s; /* かかる時間 */
+  animation-timing-function: ease-in-out; /* 変化の度合い */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes move5 {
+  0% {
+    transform: scale(2) rotate(360deg);
+  }
+  100% {
+    transform: scale(0.2) rotate(0deg);
+  }
+}
+
+.move5 {
+  animation-name: move5; /* キーフレーム */
+  animation-duration: 2s; /* かかる時間 */
+  animation-timing-function: steps(10, start); /* 変化の度合い */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes move6 {
+  0% {
+    transform: translate(50px) translateY(40px) scale(0.8) rotate(360deg);
+  }
+  100% {
+    transform: translate(-100px) translateY(-90px) scale(0.8) rotate(0deg);
+  }
+}
+
+.move6 {
+  animation-name: move6; /* キーフレーム */
+  animation-duration: 1s; /* かかる時間 */
+  animation-timing-function: steps(5, end); /* 変化の度合い */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.visuals {
+  /* 連打すると画像が選択されてしまうのを回避 */
+  user-select: none;
+}
+
+.visual {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff0f5;
+  overflow: hidden;
+  z-index: 1;
+  /* #f7f7f7; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* mix-blend-mode 使用時のクラス例 */
+.img-multiply {
+  mix-blend-mode: multiply;
+}
+.img-screen {
+  mix-blend-mode: screen;
+}
+.img-overlay {
+  mix-blend-mode: overlay;
+}
+.img-difference {
+  mix-blend-mode: difference;
+}
+.img-color-burn {
+  mix-blend-mode: color-burn;
+}
+.img-exclusion {
+  mix-blend-mode: exclusion;
+}
+.img-color-dodge {
+  mix-blend-mode: color-dodge;
+}
+.img-hue {
+  mix-blend-mode: hue;
+}
+.img-hard-light {
+  mix-blend-mode: hard-light;
+}
+
+.visual img {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.visual.is-show {
+  z-index: 2;
+}

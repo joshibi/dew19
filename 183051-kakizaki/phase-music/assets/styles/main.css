@@ -1,0 +1,61 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+  font-size: 1.6em;
+  overflow: hidden;
+  background: orange;
+
+}
+
+.visual {
+content:800px,800px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:orange;
+  overflow: hidden;
+z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes move1{
+  0%{ transform: translate(120px,0);}
+  100% {transform: translate(-120px,0) ;}
+}
+
+
+.move1 {
+  animation-name: move1;
+  animation-duration:8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.visual img{
+position: absolute;
+/* max-width: 100%;
+height: auto; */
+z-index: 1;
+
+}
+.visual.is-show{
+
+ z-index: 2;
+ 
+}
+.visuals{
+  user-select: none;
+}
+

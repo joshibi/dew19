@@ -1,0 +1,108 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem; /* 16px相当 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', sans-serif;
+  line-height: 2;
+  font-feature-settings: "pkna";
+  letter-spacing: 0.07em; /* 7%相当 */
+  background-color: #e5f1f6;
+  color: #0077aa;
+  transition: background-color .1s linear;
+}
+
+a {
+  text-decoration: none;
+  color: #e5f1f6;
+  background-color: #0077aa;
+}
+
+/* a要素にカーソルが重なった時 */
+a:hover {
+  color: #0077aa;
+  background-color: transparent;
+}
+
+h1 {
+  font-size: 3.2rem; /* 32px相当 */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+@media screen and (min-width: 1140px) {
+  body {
+    font-size: 2.4rem;
+  }
+  h1 {
+    font-size: 4.8rem;
+  }
+  .wrapper {
+    padding-top: 8%;
+    padding-bottom: 8%;
+    padding-left: 32%;
+    padding-right: 10%;
+  }
+}
+
+/* 画面の右上 30px の位置に固定する */
+.brightness-button {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 1;
+}
+
+/* 押せるようにカーソルを指のマークにする */
+.brightness-button img {
+  cursor: pointer;
+}
+
+/* デフォルト色のボタンは表示にしておく */
+.button-default {
+  display: block;
+}
+
+/* 反転色のボタンは非表示にしておく */
+.button-inverted { 
+  display: none;
+}
+
+/* 反転した場合のbodyの色指定 */
+.is-inverted{
+  color: #e5f1f6;
+  background-color: #0077aa;
+}
+
+/* 反転させるための.is-invertedがついた時のaの色指定 */
+.is-inverted a{
+  color:#0077aa;
+  background-color: #e5f1f6;
+}
+
+/* 反転時に a 要素にマウスオーバーした時の処理 */
+body.is-inverted a:hover{
+  color: #e5f1f6;
+  background-color: transparent;
+}
+
+/* 反転時のデフォルトボタンは非表示に */
+.is-inverted .button-default{
+  display: none;
+}
+
+/* 反転時の反転ボタンは表示に */
+.is-inverted .button-inverted{
+  display: block;
+}

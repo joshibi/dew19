@@ -1,0 +1,164 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+  font-size: 1.6em;
+  overflow: hidden;
+  background-color: #000;
+}
+
+@keyframes move1 {
+  0% { transform: translateX(-200%) translateY(10%); }
+  100%{ transform: translateX(200%); }
+}
+
+@keyframes move2 {
+  0% { transform: translateX(-200%) translateY(0%); }
+  100%{ transform: translateX(200%); }
+}
+
+@keyframes move3 {
+  0% { transform: translateX(-50%); }
+  100%{ transform:  translateX(50%); }
+}
+
+@keyframes move4 {
+  0% { transform: rotate(0deg); }
+  100%{ transform:  rotate(360deg); }
+}
+
+@keyframes move5 {
+  0% { transform: translateX(-100%) translateY(0%); }
+  100%{ transform: translateX(100%); }
+}
+
+@keyframes move6 {
+  0% { transform: translateX(-50%)  translateY(-350%); }
+  100%{ transform:  translateX(130%) translateY(500%); }
+}
+
+@keyframes move7 {
+  0% { transform: translateX(-100%) ; }
+  100%{ transform: translateX(100%); }
+}
+
+@keyframes move8 {
+  0% { transform: translateX(150%) translateY(-30%); }
+  100%{ transform: translateX(-150%)translateY(30%); }
+}
+
+.move1 {
+  animation-name: move1;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.move2 {
+  animation-name: move2;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.move3 {
+  animation-name: move3;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.move4 {
+  animation-name: move4;
+  animation-duration: 20s;
+  animation-timing-function: linear; 
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.move5 {
+  animation-name: move5;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.move6 {
+  animation-name: move6;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.move7 {
+  animation-name: move7;
+  animation-duration: 13s;
+  animation-timing-function: ease-in-out; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.move8 {
+  animation-name: move8;
+  animation-duration: 18s;
+  animation-timing-function: ease-in-out; 
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.visual{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  overflow: hidden;
+  z-index: 1;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+.visual > * {
+  position: absolute;
+  max-width: calc(100% - 120px);
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.visual.is-show{
+  z-index: 2;
+  opacity: 1;
+}
+
+#visual1 {
+
+}
+
+.visuals {
+  user-select: none;
+}
+
+.titles {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+  color: #ffffff;
+}
