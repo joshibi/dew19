@@ -51,7 +51,7 @@ function setSlide(){
      first.classList.add('.is-show');
    }
 }
-setInterval("setSlide()", 2000);
+setInterval("setSlide()", 1000);
 
 const slideToggleTarget = document.querySelector('.visuals');
 slideToggleTarget.addEventListener('click', setSlide);

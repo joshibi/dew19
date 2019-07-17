@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -8,20 +7,19 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
   font-size: 1.6em;
   overflow: hidden;
 }
 
-.visuals {
+.visuals{
   user-select: none;
-}
+ }
 
 /* @keyframes move1 {
   0% {
     transform: translate(0px,0px) rotate(360deg) skew(1deg);
-  }
+  } 
   100% {
     transform: translate(0px, 0px) rotate(360deg) scale(1);
     }
@@ -29,118 +27,111 @@ body {
 
 @keyframes move2 {
   0% {
-    transform: translate(0px, 0px) rotate(0deg) scale(1);
-  }
+    transform: translate(0px,0px) rotate(0deg) scale(1)
+  } 
   100% {
     transform: translate(0px, 0px) rotate(-360deg) skew(1deg);
-  }
-}
-
-@keyframes move1 {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(-360deg);
-  }
-}
-
-@keyframes move3 {
-  0% {
-    transform: translateY(-2%) rotate(0deg) scale(1);
-  }
-  100% {
-    transform: translateY(2%) rotate(0deg) skew(0deg);
-  }
-}
-
-@keyframes move4 {
-  /* 0% {
-      transform: translateY(-10%) rotate(0deg) scale(1);
     }
+  }  
+
+  @keyframes move1 {
+    0% {
+      transform: translate(0,0) rotate(0deg);
+    } 
+    100% {
+      transform: translate(0,0) rotate(-360deg);
+      }
+    }
+
+  @keyframes move3 {
+    0% {
+      transform: translateY(-2%) rotate(0deg)scale(1);
+    } 
+    100% {
+      transform: translateY(2%)  rotate(0deg) skew(0deg);
+    }
+  }
+
+  @keyframes move4 {
+    /* 0% {
+      transform: translateY(-10%) rotate(0deg) scale(1);
+    } 
     100% {
       transform: translateY(10%) rotate(0deg) skew(0deg);
     } */
-  0% {
-    transform: scale(1.02) translateY(-1%) rotate(-1deg) skew(1deg);
+    0% {
+      transform: scale(1.02) translateY(-1%) rotate(-1deg) skew(1deg);
+    } 
+    100% {
+      transform: scale(1) translateY(1%) rotate(1deg) skew(1deg);
+    }
   }
-  100% {
-    transform: scale(1) translateY(1%) rotate(1deg) skew(1deg);
+
+  @keyframes move5 {
+    0% {
+      transform: translateY(-1%) rotate(0deg) scale(4)
+    } 
+    100% {
+      transform: translateY(1%) rotate(-360deg) skew(1deg);
+      }
+    }  
+
+    @keyframes move6 {
+      0% {
+        transform: translatex(25%) rotate(0deg) scale(1)
+      } 
+      100% {
+        transform: translate5(-25%) rotate(0deg) skew(0deg);
+        }
+      }  
+
+      @keyframes move7 {
+        0% {
+          transform: translatex(-25%) rotate(0deg) scale(1)
+        } 
+        100% {
+          transform: translate5(25%) rotate(0deg) skew(0deg);
+          }
+        }  
+
+      @keyframes bg {
+        0% {
+          background-color: #13806d;
+        } 
+        25%{background-color: aqua}
+        50% {background-color: deeppink}
+        75% {background-color: red}
+        100% {
+          background-color: bisque;
+          }
+        } 
+  .img-multiply   { mix-blend-mode: multiply; }
+  .bg{
+    animation-name: bg;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+   }    
+
+.move1{
+   animation-name: move1;
+   animation-duration: 3s;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
   }
+
+  
+ .move2{
+    animation-name: move1;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
 }
 
-@keyframes move5 {
-  0% {
-    transform: translateY(-1%) rotate(0deg) scale(4);
-  }
-  100% {
-    transform: translateY(1%) rotate(-360deg) skew(1deg);
-  }
-}
-
-@keyframes move6 {
-  0% {
-    transform: translateX(25%) rotate(0deg) scale(1);
-  }
-  100% {
-    transform: translateX(-25%) rotate(0deg) skew(0deg);
-  }
-}
-
-@keyframes move7 {
-  0% {
-    transform: translateX(-25%) rotate(0deg) scale(1);
-  }
-  100% {
-    transform: translateX(25%) rotate(0deg) skew(0deg);
-  }
-}
-
-@keyframes bg {
-  0% {
-    background-color: #13806d;
-  }
-  25% {
-    background-color: aqua;
-  }
-  50% {
-    background-color: deeppink;
-  }
-  75% {
-    background-color: red;
-  }
-  100% {
-    background-color: bisque;
-  }
-}
-.img-multiply {
-  mix-blend-mode: multiply;
-}
-.bg {
-  animation-name: bg;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.move1 {
-  animation-name: move1;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.move2 {
-  animation-name: move1;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-
-.move3 {
+.move3{
   animation-name: move4;
   animation-duration: 0.1s;
   animation-timing-function: ease-in-out;
@@ -148,7 +139,7 @@ body {
   animation-direction: alternate-reverse;
 }
 
-.move4 {
+.move4{
   animation-name: move4;
   animation-duration: 0.1s;
   animation-timing-function: linear;
@@ -156,7 +147,7 @@ body {
   animation-direction: alternate-reverse;
 }
 
-.move5 {
+.move5{
   animation-name: move5;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
@@ -164,23 +155,23 @@ body {
   animation-direction: alternate-reverse;
 }
 
-.move6 {
+.move6{
   animation-name: move6;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
 }
-.move7 {
+.move7{
   animation-name: move7;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
 }
-.visuals {
+ .visuals{
   user-select: none;
-}
+ }
 
 .visual {
   position: absolute;
@@ -193,13 +184,14 @@ body {
   align-items: center;
 }
 
-.visual img {
+ .visual img {
   position: absolute;
   z-index: 1;
   max-width: calc(100% - 120px);
   height: auto;
 }
 
-.visual.is-show {
-  z-index: 2;
+.visual.is-show{
+   z-index: 2;
 }
+
