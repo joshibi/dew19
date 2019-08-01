@@ -7,7 +7,7 @@ function startLoop(audioBuffer, pan = 0, rate = 1) {
   sourceNode.buffer = audioBuffer;
   sourceNode.loop = true;
   sourceNode.loopStart = 2.98;
-  sourceNode.loopEnd = 3.80;
+  sourceNode.loopEnd = 5.0;
 
   sourceNode.playbackRate.value = rate;
   pannerNode.pan.value = pan;
@@ -16,7 +16,7 @@ function startLoop(audioBuffer, pan = 0, rate = 1) {
   sourceNode.start(0, 2.98);
 }
 
-fetch('assets/sounds/itsgonnarain.mp3')
+fetch('assets/sounds/02_Tristan.mp3')
   .then(function (response) {
     return response.arrayBuffer();
   })
@@ -52,10 +52,3 @@ function setSlide() {
 const slideToggleTarget = document.querySelector('.visuals');
 slideToggleTarget.addEventListener('click', setSlide);
 
-// $('#select').on("change", function (e) {
-//   var value = $(this).val();
-
-//   $('.mode').css({
-//     'mix-blend-mode': value
-//   });
-// });
